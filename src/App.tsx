@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes  } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import HomePage from './components/HomePage';
 import NotFound from './components/NotFound';
 
-const App: React.FC = () => (
+function App(){
+
+  return(
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login/>} />
@@ -15,5 +17,6 @@ const App: React.FC = () => (
       </Routes>
     </BrowserRouter>
   );
+}
 
 export default App;
